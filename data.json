@@ -1,0 +1,17 @@
+{
+  "source": "https://orfoqrafiya.azleks.az/",
+  "words": {
+    "kitab": {
+      "correct": "kitab",
+      "definition": "Oxumaq üçün vərəqlərdən ibarət nəşr."
+    },
+    "məktəb": {
+      "correct": "məktəb",
+      "definition": "Təhsil müəssisəsi."
+    },
+    "kompüter": {
+      "correct": "kompüter",
+      "definition": "Məlumatı emal edən elektron cihaz."
+    }
+  }
+}
