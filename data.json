@@ -1,17 +1,45 @@
 {
   "source": "https://orfoqrafiya.azleks.az/",
   "words": {
-    "kitab": {
-      "correct": "kitab",
-      "definition": "Oxumaq üçün vərəqlərdən ibarət nəşr."
-    },
-    "məktəb": {
-      "correct": "məktəb",
-      "definition": "Təhsil müəssisəsi."
-    },
-    "kompüter": {
-      "correct": "kompüter",
-      "definition": "Məlumatı emal edən elektron cihaz."
-    }
+    "ata": {"correct": "ata", "definition": "Uşağın kişi valideyni."},
+    "ana": {"correct": "ana", "definition": "Uşağın qadın valideyni."},
+    "ağac": {"correct": "ağac", "definition": "Gövdəsi, budaqları və kökü olan çoxillik bitki."},
+    "azadlıq": {"correct": "azadlıq", "definition": "Müstəqil yaşamaq, sérbəst fəaliyyət göstərmək imkânı."},
+    "axtarmaq": {"correct": "axtarmaq", "definition": "Tapmaq məqsədilə axtarış aparmaq."},
+    "bayram": {"correct": "bayram", "definition": "Xüsusi qeyd olunan təntənəli gün."},
+    "bakı": {"correct": "Bakı", "definition": "Azərbaycan Respublikasının paytaxtı."},
+    "dost": {"correct": "dost", "definition": "Yaxın, etibar edilən adam."},
+    "dil": {"correct": "dil", "definition": "İnsanların ünsiyyət vasitəsi; danışıq sistemi."},
+    "dərs": {"correct": "dərs", "definition": "Tədris məşğələsi; öyrədilən mövzu."},
+    "ev": {"correct": "ev", "definition": "Yaşamaq üçün tikili; mənzil."},
+    "elm": {"correct": "elm", "definition": "Sistemli biliyin və tədqiqatın sahəsi."},
+    "gün": {"correct": "gün", "definition": "Gündüz vaxtı; sutkanın işıqlı hissəsi."},
+    "günəş": {"correct": "günəş", "definition": "Yer kürəsini işıqlandıran ulduz."},
+    "gəlincək": {"correct": "gəlincək", "definition": "Uşaq oyuncağı olan kiçik qadın fiquru."},
+    "humanitar": {"correct": "humanitar", "definition": "İnsan və cəmiyyət elmləri ilə bağlı."},
+    "xalq": {"correct": "xalq", "definition": "Eyni dil, mədəniyyət və tarixə malik insan toplusu."},
+    "xəbər": {"correct": "xəbər", "definition": "Hadisə haqqında məlumat."},
+    "iş": {"correct": "iş", "definition": "Görülən fəaliyyət; peşə, əmək."},
+    "izah": {"correct": "izah", "definition": "Mənanın açıqlanması; şərh."},
+    "kitab": {"correct": "kitab", "definition": "Oxumaq üçün vərəqlərdən ibarət nəşr."},
+    "kompüter": {"correct": "kompüter", "definition": "Məlumatı emal edən elektron cihaz; elektron hesablama maşını."},
+    "qanun": {"correct": "qanun", "definition": "Dövlət tərəfindən qoyulan mâcburi qayda."},
+    "qapı": {"correct": "qapı", "definition": "Otağa və ya binaya giriş yeri."},
+    "lüğət": {"correct": "lüğət", "definition": "Sözlərin izahını və ya tərcüməsini verən kitab."},
+    "məktəb": {"correct": "məktəb", "definition": "Təhsil müəssisəsi."},
+    "müəllim": {"correct": "müəllim", "definition": "Dərs deyən, öyrədən şəxs."},
+    "orfoqrafiya": {"correct": "orfoqrafiya", "definition": "Sözlərin düzgün yazılış qaydaları."},
+    "oyun": {"correct": "oyun", "definition": "Ələncə və ya qaydalara tabe məşğələ."},
+    "ölkə": {"correct": "ölkə", "definition": "Müstəqil dövlət ərazisi."},
+    "su": {"correct": "su", "definition": "Maye halında olan təbii maddə; içmək və həyat üçün zəruri."},
+    "söz": {"correct": "söz", "definition": "Dilin məna daşıyan əsas vahidi."},
+    "səhifə": {"correct": "səhifə", "definition": "Kitab və ya dəftərin bir üzü."},
+    "təhsil": {"correct": "təhsil", "definition": "Bilik və bacarıq əldə etmə prosesi."},
+    "telefon": {"correct": "telefon", "definition": "Səsi uzaq məsafəyə ötürən rabitə cihazı."},
+    "uşaq": {"correct": "uşaq", "definition": "Kiçik yaşlı uşaq; övlad."},
+    "vətən": {"correct": "vətən", "definition": "Doğulduğu və ya mənsub olduğu ölkə."},
+    "yazı": {"correct": "yazı", "definition": "Hərflərlə ifadə olunmuş mətn."},
+    "yol": {"correct": "yol", "definition": "Getmək üçün cığır, küçə və ya istiqamət."},
+    "zaman": {"correct": "zaman", "definition": "Hadisələrin axdığı müddət; vaxt."}
   }
 }
