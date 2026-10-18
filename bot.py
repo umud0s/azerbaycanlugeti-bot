@@ -1,5 +1,6 @@
 import json
 import os
+from difflib import get_close_matches
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -20,6 +21,7 @@ with open(BASE / "data.json", encoding="utf-8") as f:
 
 WORDS = {k.casefold(): v for k, v in DATA["words"].items()}
 SOURCE = DATA.get("source", "https://orfoqrafiya.azleks.az/")
+WORD_KEYS = list(WORDS.keys())
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -33,16 +35,33 @@ async def lookup(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not text:
         return
 
-    item = WORDS.get(text.casefold())
-    if not item:
-        await update.message.reply_text("Bu söz bazada tapılmadı.")
+    key = text.casefold()
+    item = WORDS.get(key)
+    if item:
+        await update.message.reply_text(
+            f"Düzgün yazılış: {item['correct']}\n\n"
+            f"{item['definition']}\n\n"
+            f"Mənbə: {SOURCE}"
+        )
         return
 
-    await update.message.reply_text(
-        f"Düzgün yazılış: {item['correct']}\n\n"
-        f"{item['definition']}\n\n"
-        f"Mənbə: {SOURCE}"
-    )
+    # Oxşar sözlər təklif et
+    matches = get_close_matches(key, WORD_KEYS, n=3, cutoff=0.6)
+    if matches:
+        suggestions = []
+        for m in matches:
+            correct = WORDS[m]["correct"]
+            suggestions.append(correct)
+        text_sugg = ", ".join(suggestions)
+        await update.message.reply_text(
+            f"Bu söz bazada tapılmadı.\n\n"
+            f"Oxşar yazılışlar: {text_sugg}\n\n"
+            f"Mənbə: {SOURCE}"
+        )
+    else:
+        await update.message.reply_text(
+            f"Bu söz bazada tapılmadı.\n\nMənbə: {SOURCE}"
+        )
 
 
 def main() -> None:
