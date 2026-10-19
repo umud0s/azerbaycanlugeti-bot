@@ -19,7 +19,13 @@ load_dotenv(BASE / ".env")
 with open(BASE / "data.json", encoding="utf-8") as f:
     DATA = json.load(f)
 
-WORDS = {k.casefold(): v for k, v in DATA["words"].items()}
+
+def normalize(text: str) -> str:
+    # Azərbaycan dilində I → ı, İ → i
+    return text.replace("I", "ı").replace("İ", "i").casefold()
+
+
+WORDS = {normalize(k): v for k, v in DATA["words"].items()}
 SOURCE = DATA.get("source", "https://orfoqrafiya.azleks.az/")
 WORD_KEYS = list(WORDS.keys())
 
@@ -35,7 +41,7 @@ async def lookup(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not text:
         return
 
-    key = text.casefold()
+    key = normalize(text)
     item = WORDS.get(key)
     if item:
         await update.message.reply_text(
