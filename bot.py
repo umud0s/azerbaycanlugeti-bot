@@ -47,7 +47,8 @@ async def lookup(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text(
             f"Düzgün yazılış: {item['correct']}\n\n"
             f"{item['definition']}\n\n"
-            f"Mənbə: {SOURCE}"
+            f"İzah: bot redaksiyası.\n"
+            f"Yazılışı yoxlamaq üçün: {SOURCE}"
         )
         return
 
@@ -62,11 +63,11 @@ async def lookup(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text(
             f"Bu söz bazada tapılmadı.\n\n"
             f"Oxşar yazılışlar: {text_sugg}\n\n"
-            f"Mənbə: {SOURCE}"
+            f"Yazılışı yoxlamaq üçün: {SOURCE}"
         )
     else:
         await update.message.reply_text(
-            f"Bu söz bazada tapılmadı.\n\nMənbə: {SOURCE}"
+            f"Bu söz bazada tapılmadı.\n\nYazılışı yoxlamaq üçün: {SOURCE}"
         )
 
 
